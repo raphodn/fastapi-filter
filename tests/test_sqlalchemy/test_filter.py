@@ -16,6 +16,7 @@ from sqlalchemy.future import select
         [{"name__ilike": "%mr%"}, 2],
         [{"name__like": "%colonel"}, 1],
         [{"name__like": "Mr %"}, 2],
+        [{"name__contains": "Pra"}, 1],
         [{"name__isnull": True}, 1],
         [{"name__isnull": False}, 5],
         [{"name__not_in": ["Mr Praline", "Mr Creosote", "Gumbys", "Knight"]}, 2],

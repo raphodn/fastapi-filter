@@ -264,6 +264,7 @@ def UserFilter(User, Filter, AddressFilter):
         name__neq: Optional[str] = None
         name__like: Optional[str] = None
         name__ilike: Optional[str] = None
+        name__contains: Optional[str] = None
         name__in: Optional[List[str]] = None
         name__not: Optional[str] = None
         name__not_in: Optional[List[str]] = None

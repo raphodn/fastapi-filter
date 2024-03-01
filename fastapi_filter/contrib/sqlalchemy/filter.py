@@ -36,6 +36,7 @@ _orm_operator_transformer = {
     "gt": lambda value: ("__gt__", value),
     "gte": lambda value: ("__ge__", value),
     "in": lambda value: ("in_", value),
+    "contains": lambda value: ("contains", value),
     "isnull": lambda value: ("is_", None) if value is True else ("is_not", None),
     "lt": lambda value: ("__lt__", value),
     "lte": lambda value: ("__le__", value),
@@ -51,6 +52,7 @@ Examples:
     my_datetime__gte
     count__lt
     name__isnull
+    name__contains
     user_id__in
 """
 
